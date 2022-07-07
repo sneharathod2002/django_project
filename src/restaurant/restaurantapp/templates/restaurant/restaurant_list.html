@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<h3>Restuarant details</h3>
+<ul>
+{% for x in obj %}
+    <li><h3><a href="restaurant/{{x.id}}">{{x.Reataurant_name}}</a></h3></li> 
+    <ul> 
+        <li>{{x.Description}}</li>
+    </ul>
+{% endfor %}
+</ul>
+</table> 
+
+<p>
+    <a href="restaurant/add/">Add Restaurant</a>
+</p>
+{% endblock content %}
